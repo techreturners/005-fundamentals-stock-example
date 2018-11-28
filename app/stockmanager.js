@@ -22,6 +22,21 @@ let stockOfBooks = [
         author: "Roald Dahl",
         isbn: "784-461",
         copies: 8
+    },
+    {
+        title: "The Goblet of Fire",
+        author: "J K Rowling",
+        isbn: "896-890",
+        copies: 4
     }
 ];
 
+
+function getStock() {
+    console.log(stockOfBooks.length);
+    return stockOfBooks;
+}
+
+module.exports = {
+    getStock: getStock,
+}

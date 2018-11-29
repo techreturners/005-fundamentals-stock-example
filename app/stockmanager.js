@@ -37,6 +37,20 @@ function getStock() {
     return stockOfBooks;
 }
 
+function getBookByIsbn(isbnNumber) {
+    console.log ("isbnNumber", isbnNumber);
+    const foundBook = stockOfBooks.filter(function(bookTitle) {
+        // console.log('each book', bookTitle.isbn)
+        if (isbnNumber === bookTitle.isbn) return true  
+        else return false;
+    })
+    console.log (foundBook[0]);
+    return foundBook[0];
+    // console.log(book);
+}
+
 module.exports = {
-    getStock: getStock,
+    getStock,
+    getBookByIsbn,
+    stockOfBooks,
 }
